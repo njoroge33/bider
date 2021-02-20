@@ -1,0 +1,85 @@
+@media(max-width:35em){ /* Breakpoint only for mobile */
+    .navbar{
+
+            position: fixed;
+            right: 0px;
+            left: 0px;
+            /* margin-top: 50px; */
+            bottom:0px !important;
+            z-index: 1030;
+        
+    }
+
+    main{
+        margin-bottom: 20%;
+    }
+  }
+
+nav{
+    background-color: #F16334;
+}
+
+.top {
+    background-image: url("https://www.brazilfooty.com/wp-content/uploads/2018/12/201812-numbers.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: #c1432e; */
+    height: 20vh;
+}
+
+#overlay {
+  background-color: rgba(236, 113, 42, 0.836);
+  height: 20vh;
+}
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #c1432e; }
+  }
+
+  p {
+    margin:0 !important;
+    padding: 0 !important;
+  }
+
+
+  *, p { font-size: 0.5rem !important;}
+
+  .carousel-inner img{
+    height: 100px !important;
+    margin: 0 auto;
+    /* /* margin-left: 30% !important; */
+    /* width: auto !important;  */
+    /* margin-right: 20% !important; */
+  }
+
+  @media (min-width: 576px) {
+      *, p { font-size: 1rem !important; }
+      .carousel-inner img{
+        height: 200px !important;}
+
+  }
+
+  #overlay h1 {
+    /* color: #c1432e; */
+    font-size: 2rem !important;
+    font-weight: bold;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    /* border-right: .15em solid #c1432e; The typwriter cursor */
+    white-space: wrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+
+label, .card-header{
+  font-weight: bold;
+}
