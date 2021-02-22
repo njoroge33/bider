@@ -58,3 +58,8 @@ Route::get('/aboutus', function () {
     return view('more/about');
 })->name('about');
 
+
+Route::get('/how', function () {
+    return view('more/how');
+})->name('how');
+

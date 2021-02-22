@@ -31,12 +31,12 @@
 
 <h6 class="menu-divider mt-4">More</h6>
 <div class="list-group list-custom-small list-menu">
-<a href="#" data-menu="menu-colors">
+<a href="{{route('about')}}">
         <i class="fa fa-user rounded-sm bg-red-dark"></i>
         <span>About Us</span>
         <i class="fa fa-angle-right"></i>
     </a> 
-    <a href="#" data-menu="menu-colors">
+    <a href="#">
         <i class="fa fa-brush gradient-highlight color-white"></i>
         <span>How To Bid</span>
         <i class="fa fa-angle-right"></i>
