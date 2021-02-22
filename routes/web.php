@@ -47,6 +47,6 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 
 Route::get('/menu-main', function () {
-    return view('code/menu-main');
+    return view('layouts/menu-main');
 })->name('menu-main');
 
