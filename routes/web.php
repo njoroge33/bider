@@ -54,3 +54,7 @@ Route::get('/deposit', function () {
     return view('deposit');
 })->name('deposit');
 
+Route::get('/aboutus', function () {
+    return view('more/about');
+})->name('about');
+
