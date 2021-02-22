@@ -12,6 +12,7 @@
             <p>Place the price that you want If your bid is unique and is the lowest among unique bids, take home the product!</p>
 
             <ol>
+                <h6 class="text-center">Bid auctions within 5 easy steps </h6>
                 <li>Signup to Deals poa <a class="font-italic" href="{{route('register')}}">signup</a>.</li>
                 <li>Login to Deals poa <a class="font-italic" href="{{route('login')}}">login</a>.</li>
                 <li>Deposit money to you Deals poa wallet <a class="font-italic" href="{{route('deposit')}}">deposit</a>.</li>

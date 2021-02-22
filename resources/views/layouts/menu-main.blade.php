@@ -36,7 +36,7 @@
         <span>About Us</span>
         <i class="fa fa-angle-right"></i>
     </a> 
-    <a href="#">
+    <a href="{{route('how')}}">
         <i class="fa fa-brush gradient-highlight color-white"></i>
         <span>How To Bid</span>
         <i class="fa fa-angle-right"></i>
@@ -46,7 +46,7 @@
         <span>Completed Bids</span>
         <i class="fa fa-angle-right"></i>
     </a>
-    <a href="#" data-toggle-theme data-trigger-switch="switch-dark-mode">
+    <a data-toggle-theme data-trigger-switch="switch-dark-mode">
         <i class="fa fa-moon gradient-dark color-white"></i>
         <span>Dark Mode</span>
         <div class="custom-control scale-switch ios-switch highlight-switch switch-s">
