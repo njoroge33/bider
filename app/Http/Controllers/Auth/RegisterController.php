@@ -7,32 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Profile;
 use Illuminate\Support\Str;
-use Illuminate\Foundation\Auth\RegistersUsers;
 
 
 class RegisterController extends Controller
 {
-    
-    use RegistersUsers;
-    /**
-     * Where to redirect users after registration.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('guest');
-        $this->middleware('guest:admin');
-        $this->middleware('guest:blogger');
-    }
-
     public function index() {
         return view('auth.register');
     }
