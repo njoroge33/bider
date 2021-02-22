@@ -21,13 +21,13 @@ use App\Http\Controllers\Auth\ConfirmationController;
 |
 // */
 
-Route::get('/account/activation', [ConfirmationController::class, 'index'])->name('activate');
+Route::get('/account/activation', [ConfirmationController::class, 'index']) ;
 Route::post('/account/activation', [ConfirmationController::class, 'store']);
 
 Route::get('/bids', [BidController::class, 'index'])->name('bids')->middleware('auth');
 Route::post('/bids', [BidController::class, 'store']);
 
-Route::get('/bidding', [BiddingController::class, 'index'])->name('bidding')->middleware('auth');
+Route::get('/bidding', [BiddingController::class, 'index'])->name('bidding');
 Route::post('/bidding', [BiddingController::class, 'store']);
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -45,3 +45,8 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
+
+Route::get('/menu-main', function () {
+    return view('code/menu-main');
+})->name('menu-main');
+
