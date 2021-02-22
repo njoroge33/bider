@@ -17,7 +17,7 @@
         <i class="fa fa-wallet rounded-sm bg-brown-dark"></i>
         <span>Account Balance: 0</span>
     </a>     
-    <a id="nav-homepages" href="index-homepages.html">
+    <a id="nav-homepages" href="{{route('deposit')}}">
         <i class="fa fa-credit-card rounded-sm gradient-green color-white"></i>
         <span>Deposit</span>
         <i class="fa fa-angle-right"></i>

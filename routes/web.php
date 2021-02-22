@@ -50,3 +50,7 @@ Route::get('/menu-main', function () {
     return view('layouts/menu-main');
 })->name('menu-main');
 
+Route::get('/deposit', function () {
+    return view('deposit');
+})->name('deposit');
+
