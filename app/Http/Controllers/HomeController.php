@@ -10,7 +10,13 @@ class HomeController extends Controller
 {
     public function index(){
         $auctions= Auction::get();
-        // dd(Auth::guard('profile')->check());
+        (Auth::guard('profile')->check());
+		$user = auth()->user();
+
+
+	
+
+
         // dd($items);
         return view('home', ['auctions' => $auctions]);
     }

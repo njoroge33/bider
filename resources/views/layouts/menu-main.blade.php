@@ -10,12 +10,18 @@
 </div>
 
 <div class="mt-4"></div>
+@if (Auth::check())
 
 <h6 class="menu-divider">Account</h6>
 <div class="list-group list-custom-small list-menu">
     <a id="nav-welcome">
         <i class="fa fa-wallet rounded-sm bg-brown-dark"></i>
-        <span>Account Balance: 0</span>
+        <span>Welcome: {{{ Auth::user()->profile_name??''  }}}</span>
+    </a>  
+	
+    <a id="nav-welcome">
+        <i class="fa fa-wallet rounded-sm bg-brown-dark"></i>
+        <span>Account Balance: {{{ Auth::user()->accountBalance??0  }}}</span>
     </a>     
     <a id="nav-homepages" href="{{route('deposit')}}">
         <i class="fa fa-credit-card rounded-sm gradient-green color-white"></i>
@@ -26,7 +32,25 @@
         <i class="fa fa-dollar-sign gradient-blue color-white"></i>
         <span>Bids history</span>
         <i class="fa fa-angle-right"></i>
-    </a>        
+    </a>
+	<li class="nav-item menu-items">
+      <a class="nav-link href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+        
+        <span class="menu-icon">
+          <i class="mdi mdi-speedometer"></i>
+        </span>
+        <span class="menu-title">Logout</span>
+    </a>    
+    <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+        {{ csrf_field() }}
+    </form>
+    </li> 
+	@else
+	
+<p class="sign-up text-center">Already have an Account?<a href="{{ route('login') }}"> Sign In</a></p>
+			@endif
+
+	
 </div>
 
 <h6 class="menu-divider mt-4">More</h6>

@@ -5,34 +5,46 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Profile;
-use Illuminate\Support\Str;
+use App\Helpers\Utils;
 
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth; 
 class LoginController extends Controller
 {
     public function index() {
+		if (Auth::check()) {
+    // The user is logged in...
+return redirect()->route('home')->withSuccess('Welcome back');
+}
         return view('auth.login');
     }
 
     public function store(Request $request) {
         $this->validate($request, [
-            'phone'=> 'required|regex:/(07)[0-9]{8}/',
-            'password'=> 'required',
+            'phone'=> 'required|numeric|regex:/(07)[0-9]{8}/',
+            'password'=> 'required|numeric',
         ]);
+       
 
-        // dd($request);
+$mobilenumber = Utils::internationalizeNumber($request -> phone);
+$account_pin =$request->password;
 
-        // $phone = $request->phone;
-        $user = Profile::where('msisdn', Str::replaceFirst('0', '+254', $request -> phone))->first();
-
+// $phone = $request->phone;
+        $user = Profile::where(['msisdn'=> $mobilenumber,'account_pin'=>$account_pin])->first();
         // dd($user);
-        
-      
 
-        if (Auth::guard('profile')->attempt(['msisdn' => Str::replaceFirst('0', '254', $request -> phone), 'password' => $request->password])){
-            return redirect()->back()->with('status', 'Invalid credentials!!');
-        }else{
-            return redirect() -> route('home');
-        }
+
+		if(!$user)
+		{	
+		return redirect()->back()->withError('Invalid login details provided!');;
+		}        
+
+		if(!Auth::login($user))
+			return redirect()->back()->withError('Invalid login details provided!');;
+		
+		die("here");
+	return redirect()->route('home')->withSuccess('Welcome back');
+		
     }
 
 }

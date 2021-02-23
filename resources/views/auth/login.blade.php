@@ -9,11 +9,7 @@
 
                 <div class="card-body">
 
-                @if (session('status'))
-                <div class="bg-danger text-white text-center">
-                    {{ session('status') }}
-                </div>
-            @endif
+                @include('partials.messages')
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
