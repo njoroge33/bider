@@ -24,7 +24,6 @@ return redirect()->route('home')->withSuccess('Welcome back');
             'phone'=> 'required|numeric|regex:/(07)[0-9]{8}/',
             'password'=> 'required|numeric',
         ]);
-       
 
 $mobilenumber = Utils::internationalizeNumber($request -> phone);
 $account_pin =$request->password;
@@ -32,7 +31,6 @@ $account_pin =$request->password;
 // $phone = $request->phone;
         $user = Profile::where(['msisdn'=> $mobilenumber,'account_pin'=>$account_pin])->first();
         // dd($user);
-
 
 		if(!$user)
 		{	
