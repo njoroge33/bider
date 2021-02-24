@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Auction;
+use Carbon\Carbon;
+
 
 use Illuminate\Support\Facades\Auth;
 class HomeController extends Controller
 {
     public function index(){
-        $auctions= Auction::get();
+        $now = new Carbon;
+        $auctions= Auction::where('expiring_date','<', $now)->get();
         (Auth::guard('profile')->check());
 		$user = auth()->user();
 
