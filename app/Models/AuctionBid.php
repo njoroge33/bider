@@ -10,6 +10,7 @@ class AuctionBid extends Model
     use HasFactory;
 
     protected $fillable = [
+        'profile_id',
         'auction_id',
         'uuid',
         'amount',

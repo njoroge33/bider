@@ -22,22 +22,22 @@
 <div id="page">
     
     <div class="header header-auto-show header-fixed header-logo-center">
-        <a href="index.html" class="header-title color-orange-light">Deals poa</a>
+        <a href="{{route('home')}}" class="header-title color-orange-light">Deals poa</a>
         <a href="#" data-menu="menu-main" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
         <a href="#" data-toggle-theme class="header-icon header-icon-4 show-on-theme-dark"><i class="fas fa-sun"></i></a>
         <a href="#" data-toggle-theme class="header-icon header-icon-4 show-on-theme-light"><i class="fas fa-moon"></i></a>
-        <a href="#" data-menu="menu-share" class="header-icon header-icon-3"><i class="fas fa-share-alt"></i></a>
+        <a href="#" data-menu="menu-share" class="header-icon header-icon-3"><i class="fas fa-user"></i></a>
     </div>
     
     <div id="footer-bar" class="footer-bar-6">
-        <a href="index-components.html"><i class="fa fa-user"></i><span>Account</span></a>
+        <a data-menu="menu-share"><i class="fa fa-user"></i><span>Account</span></a>
         <a href="{{ route('home') }}" class="circle-nav active-nav"><i class="fa fa-home"></i><span>Home</span></a>
         <a href="#" data-menu="menu-main"><i class="fa fa-bars"></i><span>Menu</span></a>
     </div>
            
     <div class="page-title page-title-fixed">
-        <h1 class="color-orange-light">Deals poa</h1>
-        <a href="#" class="page-title-icon shadow-xl bg-theme color-theme" data-menu="menu-share"><i class="fa fa-share-alt"></i></a>
+        <h1 class="color-orange-light" >Deals poa</h1>
+        <a href="#" class="page-title-icon shadow-xl bg-theme color-theme" data-menu="menu-share"><i class="fa fa-user"></i></a>
         <a href="#" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-light" data-toggle-theme><i class="fa fa-moon"></i></a>
         <a href="#" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-dark" data-toggle-theme><i class="fa fa-lightbulb color-yellow-dark"></i></a>
         <a href="#" class="page-title-icon shadow-xl bg-theme color-theme" data-menu="menu-main"><i class="fa fa-bars"></i></a>
@@ -122,7 +122,7 @@
     <div id="menu-main" class="menu menu-box-left rounded-0" data-menu-load="{{ route('menu-main') }}" data-menu-width="280" data-menu-active="nav-welcome"></div>
     
     <!-- Share Menu-->
-    <div id="menu-share" class="menu menu-box-bottom rounded-m" data-menu-load="menu-share.html" data-menu-height="370"></div>  
+    <div id="menu-share" class="menu menu-box-bottom rounded-m" data-menu-load="{{ route('menu-share') }}" data-menu-height="370"></div>  
     
     <!-- Colors Menu-->
     <div id="menu-colors" class="menu menu-box-bottom rounded-m" data-menu-load="menu-colors.html" data-menu-height="480"></div> 

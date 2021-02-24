@@ -15,31 +15,31 @@
 <h6 class="menu-divider">Account</h6>
 <div class="list-group list-custom-small list-menu">
     <a id="nav-welcome">
-        <i class="fa fa-wallet rounded-sm bg-brown-dark"></i>
-        <span>Welcome: {{{ Auth::user()->profile_name??''  }}}</span>
+        <i class="fa fa-heart rounded-sm bg-red-dark"></i>
+        <span>Welcome: {{{ucfirst(trans(Auth::user()->profile_name))??'' }}}</span>
     </a>  
 	
     <a id="nav-welcome">
         <i class="fa fa-wallet rounded-sm bg-brown-dark"></i>
-        <span>Account Balance: {{{ Auth::user()->accountBalance??0  }}}</span>
+        <span>Account Balance: Kshs {{{ Auth::user()->accountBalance??0  }}}</span>
     </a>     
     <a id="nav-homepages" href="{{route('deposit')}}">
         <i class="fa fa-credit-card rounded-sm gradient-green color-white"></i>
         <span>Deposit</span>
         <i class="fa fa-angle-right"></i>
     </a>     
-    <a id="nav-components" href="index-components.html">
+    <a id="nav-components" href="{{route('bids')}}">
         <i class="fa fa-dollar-sign gradient-blue color-white"></i>
         <span>Bids history</span>
         <i class="fa fa-angle-right"></i>
     </a>
-	<li class="nav-item menu-items">
+	<li class="nav-item btn menu-items" style="background-color:orange">
       <a class="nav-link href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
         
         <span class="menu-icon">
           <i class="mdi mdi-speedometer"></i>
         </span>
-        <span class="menu-title">Logout</span>
+        <span class="menu-title color-white">Logout</span>
     </a>    
     <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
         {{ csrf_field() }}

@@ -21,7 +21,7 @@
                     <label for="amount" class="text-md-right"><strong>Your Bid:</strong></label>
                     <input id="amount" type="number" placeholder="Your lowest unique bid amount e.g 112" class="form-control @error('amount') is-invalid @enderror" name="amount" required autocomplete="amount" autofocus>
                     <input name="auction_id" id="auction_id" value="{{$auction->id}}" type="hidden">
-                    
+                    <input name="profile_id" id="profile_id" value="{{Auth::user()->profile_id}}" type="hidden">
                     <button type="submit"  class="btn btn-sm" style="margin-top:2%;background-color:orange;color:white;">Place Your Bid</button>
                 </form>
 

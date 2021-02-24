@@ -8,7 +8,8 @@ use App\Models\Profile;
 use App\Helpers\Utils;
 
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Auth; 
+use Illuminate\Support\Facades\Auth;
+
 class LoginController extends Controller
 {
     public function index() {
@@ -34,11 +35,11 @@ $account_pin =$request->password;
 
 		if(!$user)
 		{	
-		return redirect()->back()->withError('Invalid login details provided!');;
+		return redirect()->back()->withError('Invalid login details provided!');
 		}        
 
 		if(!Auth::login($user))
-			return redirect()->back()->withError('Invalid login details provided!');;
+			return redirect()->back()->withError('Invalid login details provided!');
 		
 		die("here");
 	return redirect()->route('home')->withSuccess('Welcome back');

@@ -50,6 +50,10 @@ Route::get('/menu-main', function () {
     return view('layouts/menu-main');
 })->name('menu-main');
 
+Route::get('/menu-share', function () {
+    return view('layouts/menu-share');
+})->name('menu-share');
+
 Route::get('/deposit', function () {
     return view('deposit');
 })->name('deposit');

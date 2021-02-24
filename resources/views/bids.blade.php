@@ -19,9 +19,9 @@
   @foreach ($bids as $bid)
     <tr>
       <th>{{$bid-> auction ->name}}</th>
-      <td>{{$bid-> amount}}</td>
-      <td>{{$bid-> created_at}}</td>
-      <td>{{$bid-> auction -> expiring_date}}</td>
+      <td class="color-orange-light">{{$bid-> auction -> bidding_price}}</td>
+      <td class="color-orange-light">{{$bid-> created_at->format('Y-m-d')}}</td>
+      <td class="color-orange-light">{{$bid-> auction -> expiring_date}}</td>
       @if(strtotime($bid->auction->expiring_date) < time())
         <td class="text-success">Done</td>
         @else
