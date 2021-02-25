@@ -13,7 +13,52 @@
                     Place your bid for as 1 Kshs and walk away with goods for discounts of upto 99%.
                 </p>
             </div>
-        </div>                
+        </div>    
+        
+        <h3 class="color-orange-light text-center mb-2" style="width:100%;text-decoration: underline;">Categories</h3>
+        <div class="double-slider owl-carousel owl-no-dots">
+            
+            <div class="item">
+                <div data-card-height="100" class="card shadow-xl rounded-m bg-6">
+                    <div class="card-bottom text-center">
+                        <h4 class="color-white font-10 mb-3">Phones & accessories</h4>
+                    </div>
+                    <div class="card-overlay bg-gradient"></div>
+                </div>
+            </div>
+            <!-- <div class="item">
+                <div data-card-height="100" class="card shadow-xl rounded-m bg-16">
+                    <div class="card-bottom text-center">
+                        <h4 class="color-white font-10 mb-3">Real me earphones</h4>
+                    </div>
+                    <div class="card-overlay bg-gradient"></div>
+                </div>
+            </div> -->
+            <div class="item">
+                <div data-card-height="100" class="card shadow-xl rounded-m bg-19">
+                    <div class="card-bottom text-center">
+                        <h4 class="color-white font-10 mb-3">Electronics</h4>
+                    </div>
+                    <div class="card-overlay bg-gradient"></div>
+                </div>
+            </div>
+            <!-- <div class="item">
+                <div data-card-height="100" class="card shadow-xl rounded-m bg-31">
+                    <div class="card-bottom text-center">
+                        <h4 class="color-white font-10 mb-3">Punex double charger</h4>
+                    </div>
+                    <div class="card-overlay bg-gradient"></div>
+                </div>
+            </div> -->
+            <div class="item">
+                <div data-card-height="100" class="card shadow-xl rounded-m bg-33">
+                    <div class="card-bottom text-center">
+                        <h4 class="color-white font-10 mb-3">Laptops and accessories</h4>
+                    </div>
+                    <div class="card-overlay bg-gradient"></div>
+                </div>
+            </div>
+        </div>
 
         <div class="row mr-0 ml-0">
         @foreach ($auctions as $auction)
