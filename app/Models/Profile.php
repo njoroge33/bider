@@ -23,7 +23,8 @@ class Profile extends Authenticatable
         'profile_uuid',
         'msisdn',
         'email',
-        'password',
+        'account_pin',
+        'profile_name',
         'phone_imei',
     ];
 

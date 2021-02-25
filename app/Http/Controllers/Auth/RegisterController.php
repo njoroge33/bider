@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Profile;
 use Illuminate\Support\Str;
+use App\Helpers\Utils;
 
 
 class RegisterController extends Controller
@@ -28,16 +29,17 @@ class RegisterController extends Controller
         $profile = Profile::create([
             'email'=> $request -> email,
             'profile_uuid'=> Str::uuid(),
-            'password'=> Hash::make($request -> password),
+            'account_pin'=> $request -> password,
             'phone_imei'=> 1234,
-            'msisdn'=> Str::replaceFirst('0', '+254', $request -> phone)
+            'msisdn'=> Utils::internationalizeNumber($request -> phone),
+            'profile_name'=> substr($request -> email,0,strpos($request -> email, '@')),
         ]);
 
         // dd($user);
 
         // auth()->attempt($request->only('email', 'password'));
 
-        return redirect() -> route('login');
+        return redirect() -> route('login')->withSuccess('Account succesfully created please login');
 
     }
 }
