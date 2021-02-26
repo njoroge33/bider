@@ -1,20 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header font-20 text-center color-orange-light font-weight-bold ">{{ __('Login') }}</div>
-
-                <div class="card-body">
+<div class="page-content">
+        
+        <div class="card card-style">
+            <div class="content">
+                <h1 class="font-30">Sign In</h1>
 
                 @include('partials.messages')
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone-No:') }}</label>
+                            <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Enter Mobile Number:') }}</label>
 
                             <div class="col-md-6">
                                 <input id="phone" type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required placeholder="07XX XXX XXX" autocomplete="phone" autofocus>
@@ -28,10 +26,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Pin') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Enter a 4 digits Pin:') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" pattern="\d+" required title="4 numbers" maxlength='4' minlength='4' autocomplete="current-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" pattern="\d+" required title="4 numbers" maxlength='4' minlength='4' placeholder="XXXX" autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
