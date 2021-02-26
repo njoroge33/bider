@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@include('partials.messages')
 <div class="card card-style">
             <h2 class="card-header" style="font-size:10vw;color:orange;">{{$auction->name}}</h2>
             <div class="row container">

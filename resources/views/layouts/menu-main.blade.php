@@ -33,7 +33,7 @@
         <span>Bids history</span>
         <i class="fa fa-angle-right"></i>
     </a>
-	<li class="nav-item btn menu-items" style="background-color:orange">
+	<!-- <li class="nav-item btn menu-items" style="background-color:orange">
       <a class="nav-link href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
         
         <span class="menu-icon">
@@ -44,7 +44,7 @@
     <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
         {{ csrf_field() }}
     </form>
-    </li> 
+    </li>  -->
 	@else
 	
 <p class="sign-up text-center">Already have an Account?<a href="{{ route('login') }}"> Sign In</a></p>

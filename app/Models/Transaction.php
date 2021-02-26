@@ -5,24 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AuctionBid extends Model
+class Transaction extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'profile_id',
-        'auction_id',
+        'type_id',
         'uuid',
+        'destination',
+        'status',
         'amount',
+        'previous_balance',
+        'new_balance',
     ];
-
-    public function user()
-    {
-        return $this->belongsTo(Profile::class);
-    }
-
-    public function auction()
-    {
-        return $this->belongsTo(Auction::class);
-    }
+    
 }

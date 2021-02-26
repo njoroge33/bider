@@ -12,7 +12,7 @@ class HomeController extends Controller
 {
     public function index(){
         $now = new Carbon;
-        $auctions= Auction::where('expiring_date','<', $now)->get();
+        $auctions= Auction::where('expiring_date','>', $now)->get();
         (Auth::guard('profile')->check());
 		$user = auth()->user();
 

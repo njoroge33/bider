@@ -1,6 +1,51 @@
 @extends('layouts.app')
 
 @section('content')
+
+<p class="text-center color-orange-light font-weight-bold">Today's hot deals</p>
+             
+<div class="double-slider owl-carousel owl-no-dots">
+            <div class="item">
+                <div data-card-height="220" class="card shadow-xl rounded-m bg-6">
+                    <div class="card-bottom text-center">
+                        <h4 class="color-white font-10 mb-3">Techno camon 15</h4>
+                    </div>
+                    <div class="card-overlay bg-gradient"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div data-card-height="220" class="card shadow-xl rounded-m bg-16">
+                    <div class="card-bottom text-center">
+                        <h4 class="color-white font-10 mb-3">Real me earphones</h4>
+                    </div>
+                    <div class="card-overlay bg-gradient"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div data-card-height="220" class="card shadow-xl rounded-m bg-19">
+                    <div class="card-bottom text-center">
+                        <h4 class="color-white font-10 mb-3">Ampex woofer</h4>
+                    </div>
+                    <div class="card-overlay bg-gradient"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div data-card-height="220" class="card shadow-xl rounded-m bg-31">
+                    <div class="card-bottom text-center">
+                        <h4 class="color-white font-10 mb-3">Punex double charger</h4>
+                    </div>
+                    <div class="card-overlay bg-gradient"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div data-card-height="220" class="card shadow-xl rounded-m bg-33">
+                    <div class="card-bottom text-center">
+                        <h4 class="color-white font-10 mb-3">Hp laptop </h4>
+                    </div>
+                    <div class="card-overlay bg-gradient"></div>
+                </div>
+            </div>
+        </div>
 <div class="container-fluid" style="margin-bottom:8%;">
 
 @if ($auctions-> count())

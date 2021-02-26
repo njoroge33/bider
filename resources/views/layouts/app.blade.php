@@ -27,13 +27,13 @@
         <a href="#" data-toggle-theme class="header-icon header-icon-4 show-on-theme-dark"><i class="fas fa-sun"></i></a>
         <a href="#" data-toggle-theme class="header-icon header-icon-4 show-on-theme-light"><i class="fas fa-moon"></i></a>
         @if (Auth::check())
-        <a data-menu="menu-share" class="header-icon header-icon-3"><i class="fas fa-user"></i></a>
+        <a href="{{route('bids')}}" class="header-icon header-icon-3"><i class="fas fa-user"></i></a>
         @endif
     </div>
     
     <div id="footer-bar" class="footer-bar-6">
         @if (Auth::check())
-        <a data-menu="menu-share"><i class="fa fa-user"></i><span>Account</span></a>
+        <a href="{{route('bids')}}"><i class="fa fa-user"></i><span>Account</span></a>
         @else
         <a href="{{route('login')}}"><i class="fa fa-sign-in-alt"></i><span>Login</span></a>
         @endif
@@ -44,7 +44,7 @@
     <div class="page-title page-title-fixed">
         <h1 class="color-orange-light" >Deals poa</h1>
         @if (Auth::check())
-        <a href="#" class="page-title-icon shadow-xl bg-theme color-theme" data-menu="menu-share"><i class="fa fa-user"></i></a>
+        <a href="{{route('bids')}}" class="page-title-icon shadow-xl bg-theme color-theme"><i class="fa fa-user"></i></a>
         @endif
         <a href="#" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-light" data-toggle-theme><i class="fa fa-moon"></i></a>
         <a href="#" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-dark" data-toggle-theme><i class="fa fa-lightbulb color-yellow-dark"></i></a>
@@ -53,75 +53,8 @@
     <div class="page-title-clear"></div>
         
     <div class="page-content">
-        <p class="text-center color-orange-light font-weight-bold">Today's hot deals</p>
-            
-                
-        <div class="double-slider owl-carousel owl-no-dots">
-            <div class="item">
-                <div data-card-height="220" class="card shadow-xl rounded-m bg-6">
-                    <div class="card-bottom text-center">
-                        <h4 class="color-white font-10 mb-3">Techno camon 15</h4>
-                    </div>
-                    <div class="card-overlay bg-gradient"></div>
-                </div>
-            </div>
-            <div class="item">
-                <div data-card-height="220" class="card shadow-xl rounded-m bg-16">
-                    <div class="card-bottom text-center">
-                        <h4 class="color-white font-10 mb-3">Real me earphones</h4>
-                    </div>
-                    <div class="card-overlay bg-gradient"></div>
-                </div>
-            </div>
-            <div class="item">
-                <div data-card-height="220" class="card shadow-xl rounded-m bg-19">
-                    <div class="card-bottom text-center">
-                        <h4 class="color-white font-10 mb-3">Ampex woofer</h4>
-                    </div>
-                    <div class="card-overlay bg-gradient"></div>
-                </div>
-            </div>
-            <div class="item">
-                <div data-card-height="220" class="card shadow-xl rounded-m bg-31">
-                    <div class="card-bottom text-center">
-                        <h4 class="color-white font-10 mb-3">Punex double charger</h4>
-                    </div>
-                    <div class="card-overlay bg-gradient"></div>
-                </div>
-            </div>
-            <div class="item">
-                <div data-card-height="220" class="card shadow-xl rounded-m bg-33">
-                    <div class="card-bottom text-center">
-                        <h4 class="color-white font-10 mb-3">Hp laptop </h4>
-                    </div>
-                    <div class="card-overlay bg-gradient"></div>
-                </div>
-            </div>
-        </div>
-                      
+         
         @yield('content')
-
-        <a href="#" data-toggle-theme-switch>
-            <div class="card card-style">
-                <div class="d-flex pt-3 mt-1 mb-2 pb-2">
-                    <div class="align-self-center">
-                        <i class="color-icon-gray color-gray-dark font-30 icon-40 text-center fa fa-moon ml-3 show-on-theme-light"></i>
-                        <i class="color-icon-yellow color-yellow-dark font-30 icon-40 text-center fa fa-sun ml-3 show-on-theme-dark"></i>
-                    </div>
-                    <div class="align-self-center">
-                        <p class="pl-2 ml-1 color-highlight font-500 mb-n1 mt-n1">Tap to Enable</p>
-                        <h4 class="show-on-theme-light pl-2 ml-1 mb-0">Dark Mode</h4>
-                        <h4 class="show-on-theme-dark pl-2 ml-1 mb-0">Light Mode</h4>
-                    </div>
-                    <div class="ml-auto align-self-center">
-                        <div class="custom-control ios-switch mr-5 pr-2 mt-n2">
-                            <input type="checkbox" class="ios-input" id="toggle-dark-switch">
-                            <label class="custom-control-label" for="toggle-dark-switch"></label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
         
         <div data-menu-load="menu-footer.html"></div>
     </div>
@@ -130,8 +63,8 @@
     <div id="menu-main" class="menu menu-box-left rounded-0" data-menu-load="{{ route('menu-main') }}" data-menu-width="280" data-menu-active="nav-welcome"></div>
     
     <!-- Share Menu-->
-    <div id="menu-share" class="menu menu-box-left rounded-0" data-menu-load="{{ route('menu-share') }}" data-menu-width="280"></div>  
-    
+    <!-- <div id="menu-share" class="menu menu-box-left rounded-0" data-menu-load="{{ route('menu-share') }}" data-menu-width="280"></div>  
+     -->
     <!-- Colors Menu-->
     <div id="menu-colors" class="menu menu-box-bottom rounded-m" data-menu-load="menu-colors.html" data-menu-height="480"></div> 
     
@@ -169,7 +102,9 @@
     
 </div>
 
+
 <script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/my.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 </body>

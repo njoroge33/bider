@@ -19,7 +19,8 @@ class RegisterController extends Controller
     public function store(Request $request) {
 
         $this->validate($request, [
-            'email'=> 'email|max:255',
+            'years'=>'required',
+            'terms'=>'required',
             'phone'=> 'required|regex:/(07)[0-9]{8}/',
             'password'=> 'required|confirmed',
         ]);
@@ -27,7 +28,6 @@ class RegisterController extends Controller
         // dd($request);
 
         $profile = Profile::create([
-            'email'=> $request -> email,
             'profile_uuid'=> Str::uuid(),
             'account_pin'=> $request -> password,
             'phone_imei'=> 1234,

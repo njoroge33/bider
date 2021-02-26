@@ -24,8 +24,8 @@ use App\Http\Controllers\Auth\ConfirmationController;
 Route::get('/account/activation', [ConfirmationController::class, 'index']) ;
 Route::post('/account/activation', [ConfirmationController::class, 'store']);
 
-Route::get('/bids', [BidController::class, 'index'])->name('bids')->middleware('auth');
-Route::post('/bids', [BidController::class, 'store']);
+Route::get('/my_account', [BidController::class, 'index'])->name('bids')->middleware('auth');
+Route::post('/my_account', [BidController::class, 'store']);
 
 Route::get('/bidding', [BiddingController::class, 'index'])->name('bidding');
 Route::post('/bidding', [BiddingController::class, 'store']);
