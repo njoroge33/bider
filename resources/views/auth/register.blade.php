@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="page-content">
-        
-        <div class="card card-style">
+
+  <div class="card card-style  ml-0 mr-0 rounded-0">
             <div class="content">
-                <h1 class="font-30">Sign Up</h1>
+                <h1 class="font-30">Register</h1>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -56,7 +56,7 @@
                                     </span>
                                 @enderror
                                 </div>
-                                
+
 
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="terms" id="terms" value="1">

@@ -12,18 +12,12 @@ class HomeController extends Controller
 {
     public function index(){
         $now = new Carbon;
-        $auctions= Auction::where('expiring_date','>', $now)->get();
+        $auctions= Auction::where('end_date','>', $now)->get();
         (Auth::guard('profile')->check());
 		$user = auth()->user();
-
-
-	
-
-
         // dd($items);
         return view('home', ['auctions' => $auctions]);
     }
-
     public function store(Request $request) {
         // dd($request-> item_id);
         return redirect()->route('bidding', ['id' => $request-> auction_id]);
