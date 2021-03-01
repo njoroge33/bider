@@ -5,11 +5,11 @@
         
         <div class="card card-style">
             <div class="content">
-                <h1 class="font-30">Sign Up</h1>
+                <h1 class="font-30 mb-2">Sign Up</h1>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-                        <div class="input-style has-icon input-style-1 input-required">
+                        <div class="input-style has-icon input-style-1 input-required mb-2">
                         <i class="input-icon fa fa-phone"></i>
 
                             <div class="col-md-6">
@@ -22,7 +22,7 @@
                             </div>
                         </div>
 
-                        <div class="input-style has-icon input-style-1 input-required">
+                        <div class="input-style has-icon input-style-1 input-required mb-2">
                         <i class="input-icon fa fa-lock"></i>
 
                             <div class="col-md-6">
@@ -36,7 +36,7 @@
                             </div>
                         </div>
 
-                        <div class="input-style has-icon input-style-1 input-required">
+                        <div class="input-style has-icon input-style-1 input-required mb-2">
                         <i class="input-icon fa fa-lock"></i>
 
                             <div class="col-md-6">

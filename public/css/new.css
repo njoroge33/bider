@@ -83,3 +83,7 @@ nav{
 label, .card-header{
   font-weight: bold;
 }
+
+.item2, .item3{
+  display: none !important;
+}
