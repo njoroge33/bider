@@ -65,7 +65,7 @@
         <span>How To Bid</span>
         <i class="fa fa-angle-right"></i>
     </a>  
-    <a href="#" data-menu="menu-colors">
+    <a href="{{route('complete')}}">
         <i class="fa fa-tasks gradient-green color-white"></i>
         <span>Completed Bids</span>
         <i class="fa fa-angle-right"></i>

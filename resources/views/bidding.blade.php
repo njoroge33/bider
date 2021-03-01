@@ -26,10 +26,10 @@
                     <button type="submit"  class="btn btn-sm" style="margin-top:2%;background-color:orange;color:white;">Place Your Bid</button>
                 </form>
 
-                @if(round((strtotime($auction->expiring_date) - time()) / 3600) >24)
-                   <p><strong>Ends in:</strong> <span style="color:orange;">{{floor((strtotime($auction->expiring_date) - time()) / 86400)}} days  {{ floor(((strtotime($auction->expiring_date) - time()) % 86400)/3600)}} hours {{ floor((((strtotime($auction->expiring_date) - time()) % 86400)%3600)/60)}} minutes</span></p>
+                @if(round((strtotime($auction->end_date) - time()) / 3600) >24)
+                   <p><strong>Ends in:</strong> <span style="color:orange;">{{floor((strtotime($auction->end_date) - time()) / 86400)}} days  {{ floor(((strtotime($auction->end_date) - time()) % 86400)/3600)}} hours {{ floor((((strtotime($auction->end_date) - time()) % 86400)%3600)/60)}} minutes</span></p>
                 @else
-                    <p><strong>Ends in:</strong>{{ floor((strtotime($auction->expiring_date) - time()) /3600) }} hours {{ floor(((strtotime($auction->expiring_date) - time()) %3600)/60) }} minutes</p>
+                    <p><strong>Ends in:</strong>{{ floor((strtotime($auction->end_date) - time()) /3600) }} hours {{ floor(((strtotime($auction->end_date) - time()) %3600)/60) }} minutes</p>
                 @endif
 
             </div>

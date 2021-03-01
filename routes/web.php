@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BiddingController;
 use App\Http\Controllers\BidController;
 use App\Http\Controllers\Auth\ConfirmationController;
+use App\Http\Controllers\CompleteauctionsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ use App\Http\Controllers\Auth\ConfirmationController;
 | contains the "web" middleware group. Now create something great!
 |
 // */
+Route::get('/previous_auctions', [CompleteauctionsController::class, 'index'])->name('complete');
 
 Route::get('/account/activation', [ConfirmationController::class, 'index']) ;
 Route::post('/account/activation', [ConfirmationController::class, 'store']);

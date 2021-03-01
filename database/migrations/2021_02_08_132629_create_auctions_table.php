@@ -20,7 +20,7 @@ class CreateAuctionsTable extends Migration
             $table->string('image');
             $table->decimal('actual_price', 8, 2);
             $table->decimal('bidding_price', 8, 2);
-            $table->date('expiring_date');
+            $table->date('end_date');
             $table->text('description');
             $table->timestamps();
         });

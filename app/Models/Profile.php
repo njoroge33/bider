@@ -42,6 +42,11 @@ class Profile extends Authenticatable
         return $this->hasMany(AuctionBid::class);
     }
 
+    // public function ()
+    // {
+    //     return $this->hasMany(AuctionBid::class);
+    // }
+
     /**
      * The attributes that should be cast to native types.
      *

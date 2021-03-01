@@ -15,7 +15,7 @@ class Auction extends Model
         'image',
         'actual_price',
         'bidding_price',
-        'expiring_date',
+        'end_date',
         'description'
     ];
 

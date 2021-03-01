@@ -149,6 +149,7 @@
                     <button type="submit"  class="btn btn-xs p-0" style="background-color:orange;color:white;">Place a bid</button>
                 </form>
             </div>
+
             @endif
             @endforeach
         </div>

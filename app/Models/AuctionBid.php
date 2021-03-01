@@ -16,9 +16,9 @@ class AuctionBid extends Model
         'amount',
     ];
 
-    public function user()
+    public function profile()
     {
-        return $this->belongsTo(Profile::class);
+        return $this->belongsTo(Profile::class, 'profile_id');
     }
 
     public function auction()

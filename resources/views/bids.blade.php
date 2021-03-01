@@ -43,8 +43,8 @@
       <th>{{$bid-> auction ->name}}</th>
       <td class="color-orange-light">{{$bid->amount}}</td>
       <td class="color-orange-light">{{$bid-> created_at->format('Y-m-d')}}</td>
-      <td class="color-orange-light">{{$bid-> auction -> expiring_date}}</td>
-      @if(strtotime($bid->auction->expiring_date) < time())
+      <td class="color-orange-light">{{$bid-> auction -> end_date}}</td>
+      @if(strtotime($bid->auction->end_date) < time())
         <td class="text-success">Done</td>
         @else
         <td class="text-info">In progress..</td>

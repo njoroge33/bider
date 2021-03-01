@@ -46,7 +46,7 @@ class UploadController extends Controller
                 'image'=> $filename,
                 'actual_price'=> $request -> actual_price,
                 'bidding_price'=> $request -> bidding_price,
-                'expiring_date'=> $request -> expiring_date,
+                'end_date'=> $request -> expiring_date,
                 'description'=> $request -> description,
                 'status' => True
             ]);
