@@ -21,13 +21,16 @@
 </div>
 
 @include('partials.messages')
-<div class="row mb-0">
-  <p class="btn btn-info col-6 active" id="bid">Bids History</p>
-  <p class="btn btn-info col-6" id="transaction">Trasactions History</p>
-</div>
+<div class="content">
+                <div class="tab-controls tabs-round tab-animated tabs-medium tabs-rounded shadow-xl" 
+                     data-tab-items="2" 
+                     data-tab-active="bg-info color-white">
+                    <a href="#" data-tab-active data-tab="tab-8">Bids history</a>
+                    <a href="#" data-tab="tab-9">Trasactions History</a>
+                </div>
 
 @if ($bids-> count())
-<table class="table table-striped bid">
+<table class="table table-striped tab-content" id="tab-8">
   <thead>
     <tr>
     <th scope="col">Item Name</th>
@@ -60,7 +63,7 @@
 @endif
 
 @if ($transactions-> count())
-<table class="table table-striped transaction" style="display:none;">
+<table class="table table-striped tab-content" id="tab-9">
   <thead>
     <tr>
     <th scope="col">Amount</th>
@@ -90,5 +93,6 @@
 @endif
 
 
+</div>
 </div>
 @endsection
