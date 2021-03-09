@@ -45,7 +45,8 @@
 
                                                 </div>
 
-                                                  <p>Don't have an account? <a href="{{ route('register') }}">Register</a></p>
+                                                  <p class="mb-0">Don't have an account? <a href="{{ route('register') }}">Register</a></p>
+                                                  <a href="{{ route('pin') }}" class="m-0 p-0">Forgot Pin?</a>
 
                     </form>
                 </div>

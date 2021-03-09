@@ -18,9 +18,6 @@ class DepositController extends Controller
 
         $this->validate($request, [
             'amount'=>'required',
-            // 'terms'=>'required',
-            // 'phone'=> 'required|regex:/(07)[0-9]{8}/',
-            // 'password'=> 'required|confirmed',
         ]);
         $user = auth()->user();
 

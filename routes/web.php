@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\Auth\PinController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BiddingController;
@@ -53,6 +54,9 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
+
+Route::get('/forgot_pin', [PinController::class, 'index'])->name('pin');
+Route::post('/forgot_pin', [PinController::class, 'store']); 
 
 Route::get('/menu-main', function () {
     return view('layouts/menu-main');
