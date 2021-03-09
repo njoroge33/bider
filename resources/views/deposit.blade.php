@@ -11,12 +11,7 @@
                 </div>
                 
                 <div class="card-body">
-
-                    @if (session('status'))
-                    <div class="bg-danger text-white text-center">
-                        {{ session('status') }}
-                    </div>
-                    @endif
+                @include('partials.messages')
                         <form method="POST" action="{{ route('deposit') }}">
                             @csrf
 
@@ -24,7 +19,7 @@
                                 <label for="amount" class="col-md-4 col-form-label text-md-right font-weight-bold">{{ __('Amount(Ksh) :') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="amount" type="number" class="form-control @error('amount') is-invalid @enderror" min='10' name="amount" value="{{ old('phone') }}" required placeholder="10" autocomplete="phone" autofocus>
+                                    <input id="amount" type="number" class="form-control @error('amount') is-invalid @enderror" min='1' name="amount" value="{{ old('phone') }}" required placeholder="10" autocomplete="phone" autofocus>
 
                                     @error('amount')
                                         <span class="invalid-feedback" role="alert">

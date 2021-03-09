@@ -10,6 +10,7 @@ use App\Http\Controllers\BiddingController;
 use App\Http\Controllers\BidController;
 use App\Http\Controllers\Auth\ConfirmationController;
 use App\Http\Controllers\CompleteauctionsController;
+use App\Http\Controllers\DepositController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,11 @@ use App\Http\Controllers\CompleteauctionsController;
 | contains the "web" middleware group. Now create something great!
 |
 // */
+
+
+Route::get('/deposit', [DepositController::class, 'index'])->name('deposit');
+Route::post('/deposit', [DepositController::class, 'store']);
+
 Route::get('/previous_auctions', [CompleteauctionsController::class, 'index'])->name('complete');
 
 Route::get('/account/activation', [ConfirmationController::class, 'index']) ;
@@ -55,10 +61,6 @@ Route::get('/menu-main', function () {
 Route::get('/menu-share', function () {
     return view('layouts/menu-share');
 })->name('menu-share');
-
-Route::get('/deposit', function () {
-    return view('deposit');
-})->name('deposit');
 
 Route::get('/aboutus', function () {
     return view('more/about');
